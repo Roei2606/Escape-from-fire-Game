@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="start_BTTN_padding">50dp</dimen>
+    <dimen name="text_BTTN_size">30sp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="BTTN_size">90dp</dimen>
+</resources>
