@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme._24A10357RoeiHakmon206387128Task1" parent="Base.Theme._24A10357RoeiHakmon206387128Task1" />
+    <style name="SwitchTheme">
+        <item name="colorAccent">@color/green_on</item>
+    </style>
 </resources>

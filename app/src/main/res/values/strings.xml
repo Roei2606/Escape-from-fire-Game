@@ -4,5 +4,6 @@
     <string name="main_BTTN_text">Start</string>
     <string name="right_BTTN_text">RIGHT</string>
     <string name="left_BTTN_text">LEFT</string>
+    <string name="todo">TODO</string>
 
 </resources>

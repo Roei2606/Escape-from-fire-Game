@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,9 +19,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme._24A10357RoeiHakmon206387128Task1"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCaUtYGzmrwl4mwZ4yeCstumO6ASg6qNcY">
+        </meta-data>
+        <activity
+            android:name=".Views.MapFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Views.ListFragment"
+            android:exported="false" />
+        <activity
+            android:name=".scoreActivity"
+            android:exported="false" />
         <activity
             android:name=".gameActivity"
+            android:excludeFromRecents="true"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

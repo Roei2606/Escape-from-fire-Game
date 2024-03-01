@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context="gameActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/street_background"
+        android:id="@+id/game_IMG_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         tools:srcCompat="@drawable/ic_launcher_background"
+
         />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -47,49 +49,59 @@
             android:src="@drawable/heart" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_score"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:text="000"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/first_layout"
-        android:layout_width="130dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="5"
+        android:layout_alignParentStart="true"
         android:paddingTop="60dp"
         android:paddingBottom="80dp"
         >
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_fire1"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
+            android:layout_gravity="center"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire4"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire6"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire"
+
             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire7"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire11"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire10"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire16"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_firemen1"
             android:layout_width="100dp"
@@ -103,9 +115,10 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/second_layout"
-        android:layout_width="130dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
+        android:layout_toEndOf="@id/first_layout"
         android:orientation="vertical"
         android:paddingTop="60dp"
         android:paddingBottom="80dp"
@@ -113,39 +126,35 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_fire2"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire5"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire7"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire8"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire12"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire11"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire17"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="end"
             android:layout_weight="1"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_firemen2"
@@ -160,47 +169,43 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/third_layout"
-        android:layout_width="130dp"
+        android:layout_width="80dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="5"
-        android:layout_alignParentEnd="true"
         android:paddingTop="60dp"
         android:paddingBottom="80dp"
+        android:layout_toEndOf="@id/second_layout"
         >
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_fire3"
-            android:layout_width="100dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire6"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire8"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire"
+
             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire9"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire13"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/main_IMG_fire12"
-            android:layout_width="100dp"
+            android:id="@+id/main_IMG_fire18"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_gravity="end"
             android:scaleType="fitCenter"
-            android:src="@drawable/fire" />
+             />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/main_IMG_firemen3"
             android:layout_width="100dp"
@@ -211,22 +216,125 @@
             android:src="@drawable/fireman"
             />
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fourth_layout"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_toEndOf="@id/third_layout"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        android:paddingBottom="80dp"
+        android:weightSum="5">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire9"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire19"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_firemen4"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fireman" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fifth_layout"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:paddingTop="60dp"
+        android:paddingBottom="80dp"
+        android:layout_toEndOf="@id/fourth_layout"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_fire20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+             />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_firemen5"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/fireman"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/margin_default"
-        android:layout_marginBottom="32dp">
+        >
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/main_BTN_left"
             android:layout_width="@dimen/BTTN_size"
             android:layout_height="wrap_content"
-
             android:text="@string/left_BTTN_text" />
 
         <View
-            android:layout_width="200dp"
+            android:layout_width="180dp"
             android:layout_height="0dp" />
 
         <com.google.android.material.button.MaterialButton

@@ -18,26 +18,67 @@
         android:id="@+id/main_LBL"
         android:textStyle="bold"
         android:textSize="80sp"
-        android:paddingTop="200dp"
+        android:paddingTop="100dp"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/don_t_touch_fire"
         android:gravity="center"/>
 
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/LLC_for_mode"
+    android:gravity="center">
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/main_LBL"
+        android:text="Buttons"
+        android:textSize="@dimen/text_BTTN_size" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_start_with_sensors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:layout_below="@id/main_LBL"
-        android:text="@string/main_BTTN_text"
+        android:text="Sensores"
         android:textSize="@dimen/text_BTTN_size" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/LLC_for_mode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/main_LBL"
+    android:gravity="center"
+    >
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_mode_fastSlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast mode : "
+        android:textSize="30sp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:checked="false"
+       />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
 </RelativeLayout>
